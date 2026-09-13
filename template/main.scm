@@ -11,11 +11,11 @@
   (p.background "#1a1c2c")
   (p.fill "#f4f4f4")
   (p.textFont "monospace")
-  (p.textSize (* 8 scale-factor))
+  (p.textSize (* 4 scale-factor))
   (p.text
-    "Random Walker (LIPS + p5.js) "
-    (* 5 scale-factor)
-    (* 12 scale-factor)))
+    "Todo (LIPS Scheme + p5.js) "
+    (* 2 scale-factor)
+    (* 6 scale-factor)))
 
 (define (draw p)
   (p.push)
