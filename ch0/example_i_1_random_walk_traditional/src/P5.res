@@ -7,8 +7,13 @@
 @val external rect: (float, float, float, float) => unit = "rect"
 @new external initP5Global: unit => unit = "p5"
 @val external textFont: string => unit = "textFont"
-@val external textSize: int => unit = "textSize"
-@val external text: (string, int, int) => unit = "text"
+@val external textSize: float => unit = "textSize"
+@val external text: (string, float, float) => unit = "text"
+@val external point: (float, float) => unit = "point"
+@val external scale: float => unit = "scale"
+@val external strokeWeight: int => unit = "strokeWeight"
+@val external floor: float => float = "floor"
+@val external random: int => float = "random"
 
 @val
 external background: (

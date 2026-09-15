@@ -1,24 +1,59 @@
-let baseWidth = 160
-let baseHeight = 120
-let scaleFactor = 6
+let baseWidth = 160.0
+let baseHeight = 120.0
+let scaleFactor = 6.0
 let screenWidth = baseWidth * scaleFactor
 let screenHeight = baseHeight * scaleFactor
 let bgColor = "#1a1c2c"
 let textColor = "#f4f4f4"
+let walkerColor = "#ff0044"
+
+type walker = {
+  mutable x: float,
+  mutable y: float,
+}
+
+let w: walker = {
+  x: baseWidth / 2.0,
+  y: baseHeight / 2.0
+}
+
+let showWalker = () => {
+  P5.scale(scaleFactor)
+  P5.stroke(walkerColor)
+  P5.point(w.x, w.y)
+}
+
+let updateWalker = () => {
+  let choice = Float.toInt(P5.floor(P5.random(4)))
+
+  if choice == 0 {
+    w.x = w.x + 1.0
+  } else if choice == 1 {
+    w.x = w.x - 1.0
+  } else if choice == 2 {
+    w.y = w.y + 1.0
+  } else {
+    w.y = w.y - 1.0
+  }
+}
+
+let setup = () => {
+  P5.createCanvas(screenWidth, screenHeight)
+  P5.background(#Str(bgColor))
+  P5.fill(textColor)
+  P5.textFont("monospace")
+  P5.textSize(scaleFactor * 4.0)
+  P5.text("Todo (ReScript + p5.js)", 2.0 * scaleFactor, 6.0 * scaleFactor)
+}
+
+let draw = () => {
+  showWalker()
+  updateWalker()
+}
 
 let main = () => {
-  Browser.window->P5.setSetup(() => {
-    P5.createCanvas(Int.toFloat(screenWidth), Int.toFloat(screenHeight))
-    P5.background(#Str(bgColor))
-    P5.fill(textColor)
-    P5.textFont("monospace")
-    P5.textSize(scaleFactor * 4)
-    P5.text("Todo (ReScript + p5.js)", 2 * scaleFactor, 6 * scaleFactor)
-  })
-
-  // Browser.window->P5.setDraw(() => {
-  // })
-
+  Browser.window->P5.setSetup(setup)
+  Browser.window->P5.setDraw(draw)
   P5.initP5Global()
 }
 
