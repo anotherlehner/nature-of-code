@@ -1,3 +1,5 @@
+*.mjs
+
 # Logs
 logs
 *.log
