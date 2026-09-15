@@ -1,6 +1,6 @@
-let baseWidth = 160
-let baseHeight = 120
-let scaleFactor = 6
+let baseWidth = 160.0
+let baseHeight = 120.0
+let scaleFactor = 6.0
 let screenWidth = baseWidth * scaleFactor
 let screenHeight = baseHeight * scaleFactor
 let bgColor = "#1a1c2c"
@@ -8,12 +8,12 @@ let textColor = "#f4f4f4"
 
 let main = () => {
   Browser.window->P5.setSetup(() => {
-    P5.createCanvas(Int.toFloat(screenWidth), Int.toFloat(screenHeight))
+    P5.createCanvas(screenWidth, screenHeight)
     P5.background(#Str(bgColor))
     P5.fill(textColor)
     P5.textFont("monospace")
-    P5.textSize(scaleFactor * 4)
-    P5.text("Todo (ReScript + p5.js)", 2 * scaleFactor, 6 * scaleFactor)
+    P5.textSize(scaleFactor * 4.0)
+    P5.text("Todo (ReScript + p5.js)", 2.0 * scaleFactor, 6.0 * scaleFactor)
   })
 
   // Browser.window->P5.setDraw(() => {

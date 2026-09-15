@@ -43,7 +43,7 @@ let setup = () => {
   P5.fill(textColor)
   P5.textFont("monospace")
   P5.textSize(scaleFactor * 4.0)
-  P5.text("Todo (ReScript + p5.js)", 2.0 * scaleFactor, 6.0 * scaleFactor)
+  P5.text("Traditional Random Walker (ReScript + p5.js)", 2.0 * scaleFactor, 6.0 * scaleFactor)
 }
 
 let draw = () => {
