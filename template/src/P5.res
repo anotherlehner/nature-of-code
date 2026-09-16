@@ -13,6 +13,7 @@
 @val external scale: float => unit = "scale"
 @val external strokeWeight: int => unit = "strokeWeight"
 @val external floor: float => float = "floor"
+@val external constrain: (float, float, float) => float = "constrain"
 
 @val
 external random: (
@@ -30,3 +31,6 @@ external background: (
     | #RGB(float, float, float)
   ]
 ) => unit = "background"
+
+@val external mouseX: float = "mouseX"
+@val external mouseY: float = "mouseY"
