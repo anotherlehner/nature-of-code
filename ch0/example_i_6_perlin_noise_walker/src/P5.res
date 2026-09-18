@@ -21,31 +21,28 @@
 @val external noise: float => float = "noise"
 
 @val
-external fill: (
-  @unwrap [
-    | #CSSColor(string)
-    | #Range(float, float)
-  ]
-) => unit = "fill"
+external fill: @unwrap
+[
+  | #CSSColor(string)
+  | #Range(float, float)
+] => unit = "fill"
 
 @val
-external random: (
-  @unwrap [
-    | #Num(int)
-    | #Range(int, int)
-  ]
-) => float = "random"
+external random: @unwrap
+[
+  | #Num(int)
+  | #Range(int, int)
+] => float = "random"
 
 @val external randomChoice: array<'a> => 'a = "random"
 
 @val
-external background: (
-  @unwrap [
-    | #Num(float)
-    | #Str(string)
-    | #RGB(float, float, float)
-  ]
-) => unit = "background"
+external background: @unwrap
+[
+  | #Num(float)
+  | #Str(string)
+  | #RGB(float, float, float)
+] => unit = "background"
 
 @val external mouseX: float = "mouseX"
 @val external mouseY: float = "mouseY"

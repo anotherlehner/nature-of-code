@@ -42,7 +42,7 @@ let setup = () => {
   P5.fill(#CSSColor(textColor))
   P5.textFont("monospace")
   P5.textSize(scaleFactor * 4.0)
-  P5.text("Exercise 0.6 Quadratic Walker (ReScript + p5.js)", 2.0 * scaleFactor, 6.0 * scaleFactor)
+  P5.text("Exercise 0.6 Perlin Noise (ReScript + p5.js)", 2.0 * scaleFactor, 6.0 * scaleFactor)
 }
 
 let draw = () => {
