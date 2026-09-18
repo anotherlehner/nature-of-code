@@ -10,7 +10,7 @@ let main = () => {
   Browser.window->P5.setSetup(() => {
     P5.createCanvas(screenWidth, screenHeight)
     P5.background(#Str(bgColor))
-    P5.fill(textColor)
+    P5.fill(#CSSColor(textColor))
     P5.textFont("monospace")
     P5.textSize(scaleFactor * 4.0)
     P5.text("Todo (ReScript + p5.js)", 2.0 * scaleFactor, 6.0 * scaleFactor)

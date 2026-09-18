@@ -33,8 +33,6 @@ external random: (
   ]
 ) => float = "random"
 
-@val external randomChoice: array<'a> => 'a = "random"
-
 @val
 external background: (
   @unwrap [
