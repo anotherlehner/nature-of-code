@@ -17,32 +17,32 @@
 @val external circle: (float, float, float) => unit = "circle"
 @val external noStroke: unit => unit = "noStroke"
 
-@val
-external fill: (
-  @unwrap [
-    | #CSSColor(string)
-    | #Range(float, float)
-  ]
-) => unit = "fill"
+@val external map: (float, float, float, float, float) => float = "map"
+@val external noise: float => float = "noise"
 
 @val
-external random: (
-  @unwrap [
-    | #Num(int)
-    | #Range(int, int)
-  ]
-) => float = "random"
+external fill: @unwrap
+[
+  | #CSSColor(string)
+  | #Range(float, float)
+] => unit = "fill"
+
+@val
+external random: @unwrap
+[
+  | #Num(int)
+  | #Range(int, int)
+] => float = "random"
 
 @val external randomChoice: array<'a> => 'a = "random"
 
 @val
-external background: (
-  @unwrap [
-    | #Num(float)
-    | #Str(string)
-    | #RGB(float, float, float)
-  ]
-) => unit = "background"
+external background: @unwrap
+[
+  | #Num(float)
+  | #Str(string)
+  | #RGB(float, float, float)
+] => unit = "background"
 
 @val external mouseX: float = "mouseX"
 @val external mouseY: float = "mouseY"
