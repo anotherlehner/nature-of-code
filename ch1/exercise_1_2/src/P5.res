@@ -11,7 +11,7 @@ type vector = {
   mutable y: float
 }
 @val external createVector: (float, float) => vector = "createVector"
-@send external add: (vector, vector) => vector = "add"
+@send external add: (vector, vector) => unit = "add"
 
 @set external setSetup: (Browser.window, unit => unit) => unit = "setup"
 @set external setDraw: (Browser.window, unit => unit) => unit = "draw"
